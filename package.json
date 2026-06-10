@@ -1,0 +1,88 @@
+{
+  "name": "laravel-command-run",
+  "displayName": "Laravel Command Run",
+  "description": "Right-click a Laravel Artisan command PHP file to run it from the terminal",
+  "version": "0.0.1",
+  "publisher": "ShyamkumarAshokGarud",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": ["onLanguage:php"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "laravelCommandRun.run",
+        "title": "Run Laravel Command"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "laravelCommandRun.run",
+          "when": "resourceExtname == .php",
+          "group": "navigation@1"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "laravelCommandRun.run",
+          "when": "resourceExtname == .php",
+          "group": "navigation@1"
+        }
+      ],
+      "editor/title/context": [
+        {
+          "command": "laravelCommandRun.run",
+          "when": "resourceExtname == .php",
+          "group": "navigation@1"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Laravel Command Run",
+      "properties": {
+        "laravelCommandRun.useTenancy": {
+          "type": "string",
+          "enum": ["ask", "yes", "no"],
+          "enumDescriptions": [
+            "Always ask (show prompt every time)",
+            "Always use tenants:run — never ask",
+            "Never use tenants:run — never ask"
+          ],
+          "default": "ask",
+          "description": "Whether to use multi-tenancy (tenants:run). Set to 'yes' or 'no' to skip the prompt."
+        },
+        "laravelCommandRun.tenantId": {
+          "type": "string",
+          "default": "",
+          "description": "Fixed tenant ID. When set, the tenant ID prompt is skipped and this value is used automatically."
+        },
+        "laravelCommandRun.clearLog": {
+          "type": "string",
+          "enum": ["ask", "yes", "no"],
+          "enumDescriptions": [
+            "Always ask (show prompt every time)",
+            "Always clear laravel.log — never ask",
+            "Never clear laravel.log — never ask"
+          ],
+          "default": "ask",
+          "description": "Whether to clear storage/logs/laravel.log before running. Set to 'yes' or 'no' to skip the prompt."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package",
+    "vscode:prepublish": "npm run compile"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0",
+    "@vscode/vsce": "^3.0.0"
+  }
+}
