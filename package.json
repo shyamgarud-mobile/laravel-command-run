@@ -2,7 +2,7 @@
   "name": "laravel-command-run",
   "displayName": "Laravel Command Run",
   "description": "Right-click a Laravel Artisan command PHP file to run it from the terminal",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "ShyamkumarAshokGarud",
   "icon": "images/icon.png",
   "repository": {
@@ -12,8 +12,12 @@
   "engines": {
     "vscode": "^1.85.0"
   },
-  "categories": ["Other"],
-  "activationEvents": ["onLanguage:php"],
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:php"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
@@ -50,7 +54,11 @@
       "properties": {
         "laravelCommandRun.useTenancy": {
           "type": "string",
-          "enum": ["ask", "yes", "no"],
+          "enum": [
+            "ask",
+            "yes",
+            "no"
+          ],
           "enumDescriptions": [
             "Always ask (show prompt every time)",
             "Always use tenants:run — never ask",
@@ -66,7 +74,11 @@
         },
         "laravelCommandRun.clearLog": {
           "type": "string",
-          "enum": ["ask", "yes", "no"],
+          "enum": [
+            "ask",
+            "yes",
+            "no"
+          ],
           "enumDescriptions": [
             "Always ask (show prompt every time)",
             "Always clear laravel.log — never ask",
