@@ -1,8 +1,8 @@
-# Laravel Command Run
+# Run Artisan
 
 **Run any Laravel Artisan command directly from the file explorer or editor — no terminal typing required.**
 
-Right-click a PHP file, select **Run Laravel Command**, answer a few prompts, and the command runs instantly in the integrated terminal. Supports multi-tenancy, remembers your last inputs, and opens the log file automatically.
+Right-click a PHP file, select **Run Artisan**, answer a few prompts, and the command runs instantly in the integrated terminal. Supports multi-tenancy, remembers your last inputs, and opens the log file automatically.
 
 ---
 
@@ -32,7 +32,7 @@ Right-click a PHP file, select **Run Laravel Command**, answer a few prompts, an
 
 ### 1. Right-click any PHP Command file
 
-Right-click in the **Explorer panel** or on a **file tab** and select **Run Laravel Command**.
+Right-click in the **Explorer panel** or on a **file tab** and select **Run Artisan**.
 
 The extension checks whether the PHP class:
 - Extends `Illuminate\Console\Command`
@@ -83,7 +83,7 @@ The command runs in the **Laravel Artisan** terminal panel. The `laravel.log` fi
 
 ## Global Configuration
 
-Set these once in your VS Code settings (`Ctrl+,` → search **Laravel Command Run**) to skip prompts entirely:
+Set these once in your VS Code settings (`Ctrl+,` → search **Run Artisan**) to skip prompts entirely:
 
 | Setting | Options | Default | Description |
 |---|---|---|---|
