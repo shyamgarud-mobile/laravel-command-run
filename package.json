@@ -2,7 +2,7 @@
   "name": "laravel-command-run",
   "displayName": "Run Artisan",
   "description": "Right-click a Laravel Artisan command PHP file to run it from the terminal",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "ShyamkumarAshokGarud",
   "icon": "images/icon.png",
   "repository": {
