@@ -4,6 +4,10 @@
   "description": "Right-click a Laravel Artisan command PHP file to run it from the terminal",
   "version": "0.0.1",
   "publisher": "ShyamkumarAshokGarud",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shyamgarud-mobile/laravel-command-run"
+  },
   "engines": {
     "vscode": "^1.85.0"
   },
