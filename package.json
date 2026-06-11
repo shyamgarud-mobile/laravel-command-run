@@ -1,6 +1,6 @@
 {
   "name": "laravel-command-run",
-  "displayName": "Laravel Command Run",
+  "displayName": "Run Artisan",
   "description": "Right-click a Laravel Artisan command PHP file to run it from the terminal",
   "version": "0.0.3",
   "publisher": "ShyamkumarAshokGarud",
@@ -23,7 +23,7 @@
     "commands": [
       {
         "command": "laravelCommandRun.run",
-        "title": "Run Laravel Command"
+        "title": "Run Artisan"
       }
     ],
     "menus": {
@@ -50,7 +50,7 @@
       ]
     },
     "configuration": {
-      "title": "Laravel Command Run",
+      "title": "Run Artisan",
       "properties": {
         "laravelCommandRun.useTenancy": {
           "type": "string",
